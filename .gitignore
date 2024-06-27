@@ -1,0 +1,94 @@
+docker-compose.override.yml
+secondbrain/
+.env
+.streamlit/secrets.toml
+**/*.pyc
+toto.txt
+*.ipynb
+log.txt
+
+backend/venv
+backend/.env
+backend/*.deb
+backend/.python-version
+
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+**/node_modules
+**/.pnp
+.pnp.js
+
+# testing
+**/coverage
+
+# next.js
+**/.next/
+**/out/
+
+# production
+**/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+.env*.local
+.env*.production
+
+# Vercel
+.vercel
+
+# Env files
+envs/*.env
+envs/production.env
+envs/strapi.env
+backend/.env.test
+
+# Typescript
+*.tsbuildinfo
+next-env.d.ts
+ragenius/*
+streamlit-demo/.streamlit/secrets.toml
+.backend_env
+.frontend_env
+backend/core/pandoc-*
+**/.pandoc-*
+backend/core/application_default_credentials.json
+
+# Local models
+backend/core/local_models/*
+
+## Scripts
+package-lock.json
+backend/celerybeat-schedule
+frontend/public/robots.txt
+frontend/public/sitemap*
+
+pyfiles/*
+backend/bin/*
+backend/lib/*
+backend/pyvenv.cfg
+backend/share/*
+backend/slim.report.json
+volumes/db/data/
+volumes/storage/stub/stub/ragenius/*
+supabase/migrations/20240103191539_private.sql
+supabase/20240103191539_private.sql
+airwallexpayouts.py
+backend/celerybeat-schedule.db
+
+application.log
+backend/score.json
+backend/modules/assistant/ito/utils/simple.pdf
+backend/modules/sync/controller/credentials.json
+backend/application.log.*
+
+# Project InLang
+project.inlang/project_id

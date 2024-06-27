@@ -1,0 +1,36 @@
+name: development
+
+services:
+  backend-core:
+    container_name: backend-core
+    image: backend-base:latest
+    pull_policy: never
+    restart: always
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    env_file:
+      - .env
+    build:
+      context: backend
+      dockerfile: Dockerfile.dev
+      cache_from:
+        - backend-base:latest
+      args:
+        - DEV_MODE=true
+    volumes:
+      - ./:/code/
+    command:
+      - "uvicorn"
+      - "main:app"
+      - "--reload"
+      - "--host"
+      - "0.0.0.0"
+      - "--port"
+      - "5050"
+      - "--workers"
+      - "6"
+      - "--log-level"
+      - "info"
+    ports:
+      - 5050:5050
+      - 5678:5678 # Debug PORT

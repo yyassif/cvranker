@@ -1,0 +1,39 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+openai = "*"
+nest-asyncio = "*"
+pypdf = "*"
+fastapi = "*"
+python-multipart = "*"
+uvicorn = "*"
+duckduckgo-search = "*"
+python-jose = "*"
+asyncpg = "*"
+flake8 = "*"
+flake8-black = "*"
+pyright = "*"
+resend = "*"
+python-dotenv = "*"
+async-generator = "*"
+langchain = "*"
+langchain-community = "*"
+langchain-openai = "*"
+llama-index = "*"
+llama-parse = "*"
+pydantic-settings = "*"
+unstructured = {extras = ["all-docs"], version = "*"}
+unidecode = "*"
+colorlog = "*"
+jq = "*"
+
+
+[dev-packages]
+black = "*"
+ipykernel = "*"
+
+[requires]
+python_version = "3.11"

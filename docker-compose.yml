@@ -1,0 +1,25 @@
+name: production
+
+services:
+  backend-core:
+    image: yyassif/ragenius-backend:latest
+    container_name: backend-core
+    pull_policy: if_not_present
+    restart: always
+    env_file:
+      - .env
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    healthcheck:
+      test: ["CMD", "curl", "http://localhost:5050/healthz"]
+    command:
+      - "uvicorn"
+      - "main:app"
+      - "--host"
+      - "0.0.0.0"
+      - "--port"
+      - "5050"
+      - "--workers"
+      - "6"
+    ports:
+      - 5050:5050

@@ -1,0 +1,7 @@
+{
+  "recommendations": [
+    "ms-pyright.pyright",
+    "dbaeumer.vscode-eslint",
+    "ms-python.vscode-pylance"
+  ]
+}
